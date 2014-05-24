@@ -1,0 +1,12 @@
+/* FONTS
+----------------------------------------------- */
+$primarySerif: georgia, serif;
+$primarySansSerif: "futura-pt", helvetica, arial, sans-serif;
+
+%primary-serif {
+	font-family: $primarySerif;	
+}
+
+%primary-sans-serif {
+	font-family: $primarySansSerif;
+}
