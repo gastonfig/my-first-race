@@ -20,12 +20,23 @@ $grid-padding: 0;
 $container-style: magic;
 
 .container {	
-	@include susy-grid-background;
+	// @include susy-grid-background;
 	@include container;
+	padding: 0 120px;
 
 	&.main {
 		background-color: #fff;
 	}
+
+	.stretch {
+		@include pull(2, 16);
+		@include span-columns(20, 16);
+		padding: 0;
+	}
+}
+
+.section-two, .section-four, .section-six, footer {
+	@extend .stretch;
 }
 
 html {
@@ -49,8 +60,8 @@ section, footer {
 
 .one-three {
 	.col-one {
-		@include span-columns(5, 16);
-		@include prefix(1);
+		@include span-columns(6, 16);
+		// @include prefix(1);
 	}
 
 	.col-three {
@@ -202,36 +213,19 @@ h1 {
 	}
 
 	.stats {
-		@include span-columns(14, 16);
-		@include prefix(1);
+		width: 100%;
 		@include px-to-rem(padding-bottom, $baseline * 2);
 		@include px-to-rem(padding-top, $baseline * 2);
 
-		// li {
-		// 	background: #ddd;
-		// 	display: inline-block;
-		// 	height: 38px;
-		// 	margin-left: .03em;
-		// 	margin-right: .03em;
-		// 	position: relative;			
-		// 	width: 38px;
-
-		// 	@include border-radius(40px);
-
-		// 	&.activity {
-		// 		background: $accent;
-		// 	}
-		// }
 		li {
 			background: #fff;
-			// background: #ddd;
 			border: 1px solid $accent;
 			display: inline-block;
-			height: 37px;
+			height: 38px;
 			margin-left: .03em;
 			margin-right: .03em;
 			position: relative;			
-			width: 37px;
+			width: 38px;
 
 			@include border-radius(40px);
 
@@ -257,7 +251,7 @@ h1 {
 }
 
 path.slice{
-    stroke-width: 1px;
+    stroke-width: 1px;    
 }
 
 polyline{
@@ -367,6 +361,27 @@ polyline{
 
 	#map {
 		height: 715px;
+
+		.leaflet-left .leaflet-control {
+			box-shadow: none;
+			border-radius: 0;
+			margin-left: 20px;
+			margin-top: 20px;
+
+			a {
+				padding: 3px;
+				@include border-radius(0);
+
+				&:hover {
+					color: #fff;
+					background: $darkGray;
+				}
+
+				&:active {
+					opacity: .8;
+				}
+			}
+		}
 	}
 
 	.inner {
@@ -379,8 +394,13 @@ polyline{
 
 	.col-one {		
 		float: left;
-		width: columns(5, 7) - gutter(7);
-		@include prefix(1, 7);
+		width: columns(6, 7) - gutter(7);
+	}
+
+	.col-three {	
+		float: right;
+		@include span-columns(11, 16);
+		margin-right: columns(-4, 16);
 	}
 
 	.tunes__stats {
@@ -527,11 +547,21 @@ polyline{
 	background: $midGray;
 	@include px-to-rem(padding-bottom, $baseline * 4);
 
+	.inner {
+		@include span-columns(10, 16);
+		@include prefix(3, 16);
+		@include suffix(3, 16);
+	}
+
 	h2, p, a {
 		color: #fff;
 	}
 
 	.social {
+		display: inline-block;
+		margin-left: 10%;
+		width: 80%;
+
 		@extend %primary-sans-serif;		
 		@include px-to-rem(margin-top, $baseline * 4);
 
