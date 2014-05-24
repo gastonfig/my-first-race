@@ -20,7 +20,7 @@ $grid-padding: 0;
 $container-style: magic;
 
 .container {	
-	// @include susy-grid-background;
+	@include susy-grid-background;
 	@include container;
 
 	&.main {
@@ -192,9 +192,6 @@ h1 {
 /* SECTION TWO
 ----------------------------------------------- */
 .section-two {
-	img {
-		width: 102.5%;
-	}
 }
 
 /* SECTION THREE
