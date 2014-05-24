@@ -11,9 +11,9 @@
 /* LAYOUT
 ----------------------------------------------- */
 // SUSY
-// 16 col 1180px wide
+// 16 col 940px wide
 $total-columns: 16;
-$column-width: 64px;
+$column-width: 40px;
 $gutter-width: 20px;    
 $grid-padding: 0; 
 
@@ -119,10 +119,18 @@ a {
 	text-decoration: none;
 }
 
+.drop {
+	color: $accent;
+	float: left;
+	padding-right: 10px;
+
+	@include type-size(12.1, 9.9);
+}
+
 .two-columns {
-	@include span-columns(12, 16);
-	@include prefix(2, 16);
-	@include suffix(2, 16);
+	@include span-columns(10, 16);
+	@include prefix(3, 16);
+	@include suffix(3, 16);
 	@include px-to-rem(padding-top, $baseline * 3.5);
 
 	h2, p {
@@ -134,12 +142,12 @@ a {
 	}
 
 	p {
-		-webkit-column-count: 2;
-		-webkit-column-gap: 30px;
-		-moz-column-count: 2;
-		-moz-column-gap: 30px;
-		column-count: 2;
-		column-gap: 30px;
+		// -webkit-column-count: 2;
+		// -webkit-column-gap: 30px;
+		// -moz-column-count: 2;
+		// -moz-column-gap: 30px;
+		// column-count: 2;
+		// column-gap: 30px;
 	}
 }
 
