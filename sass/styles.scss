@@ -98,11 +98,23 @@ $baseline: 3;
 
 	h2 {
 		color: $darkGray;
-		letter-spacing: .05em;
+		letter-spacing: .07em;
 		margin: ($baseline/2 + rem) 0 ($baseline/2 + rem) 0;
+		position: relative;
 		text-transform: uppercase;
 
-		@include type-size(2.1);
+		@include type-size(1.8);
+		@include px-to-rem(margin-bottom, 6);
+
+		&:after {
+			background: $darkHeadings;		
+			content: '';
+			height: 1px;
+			left: 0;
+			position: absolute;
+			top: 47px;
+			width: 80px;
+		}
 	}
 
 	p {
@@ -119,6 +131,10 @@ $baseline: 3;
 
 .light h2 {
 	color: $lightHeadings;
+
+	&:after {
+		background: #eee;
+	}
 }
 
 ul {
