@@ -126,7 +126,8 @@ $('.activity').qtip({
     },
     style: {
         tip: {
-            corner: 'bottom center'
+            corner: 'bottom center',
+            width: 14
         }
     },
     show: {

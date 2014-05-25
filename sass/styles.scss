@@ -273,7 +273,7 @@ polyline{
 	background: $darkGray;
 	border-color: $darkGray;
 	color: $lighterGray;
-	padding-top: 16px;
+	padding: 16px 6px 0;
 	text-align: center;
 
 	@extend %primary-sans-serif;
