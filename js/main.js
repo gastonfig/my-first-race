@@ -131,6 +131,7 @@ $('.activity').qtip({
         }
     },
     show: {
+        solo: true,
     	delay: 0,
     	effect: function() {
     		$(this).show();
@@ -152,14 +153,8 @@ $('.activity').qtip({
 });
 
 // Show the first tooltip on load and hide when others are hovered
-$('.first').trigger("mouseover").addClass('hover');
+$('.first').qtip('show');
 
-if($('.first').hasClass('hover')) {
-    $('.activity').hover(function() {
-        $('.first').qtip('hide');
-        $('.first').removeClass('hover');
-    });
-}
 /**
  * Pie Chart Using D3.js
  *
