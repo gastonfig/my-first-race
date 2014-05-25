@@ -384,23 +384,18 @@ polyline{
 		}
 	}
 
-	.inner {
-		// @include span-columns(7, 16);
+	.col-one {
 		float: left;
-		width: columns(7, 16) + gutter(16);
+		width: columns(6, 16) - gutter();
+		margin-left: columns(-1);
 
-		@include px-to-rem(margin-top, $baseline * 3);
+		@include px-to-rem(margin-top, $baseline * 5.2);
 	}
 
-	.col-one {		
-		float: left;
-		width: columns(6, 7) - gutter(7);
-	}
-
-	.col-three {	
+	.col-three {		
+		@include span-columns(12, 16);
 		float: right;
-		@include span-columns(11, 16);
-		margin-right: columns(-4, 16);
+		margin-right: columns(-3, 16);
 	}
 
 	.tunes__stats {
