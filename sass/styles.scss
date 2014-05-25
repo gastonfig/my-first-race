@@ -120,6 +120,10 @@ $baseline: 3;
 			top: 47px;
 			width: 80px;
 		}
+
+		&.pull {
+			margin-left: columns(-2);
+		}
 	}
 
 	p {
@@ -154,9 +158,9 @@ a {
 .drop {
 	color: $accent;
 	float: left;
-	padding-right: 10px;
+	padding-right: 4px;
 
-	@include type-size(12.1, 9.9);
+	@include type-size(6.9, 6.5);
 }
 
 .centered-text {
@@ -166,6 +170,10 @@ a {
 
 	p {
 		@include type-size(1.8, 3.3);	
+	}
+
+	h2 {
+		@extend .pull;
 	}
 }
 
