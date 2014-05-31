@@ -22,23 +22,11 @@ $container-style: magic;
 .container {	
 	// @include susy-grid-background;
 	@include container;
-	// padding: 0 120px;
 	padding: 0;
 
 	&.main {
 		background-color: #fff;
 	}
-}
-
-.stretch {
-	// @include pull(2, 16);
-	// @include span-columns(20, 16);
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.section-one, .section-two, .section-four, .section-six, footer {
-	@extend .stretch;
 }
 
 html {
@@ -166,14 +154,6 @@ a {
 	text-decoration: none;
 }
 
-// .drop {
-// 	color: $accent;
-// 	float: left;
-// 	padding-right: 4px;
-
-// 	@include type-size(6.9, 6.5);
-// }
-
 .centered-text {
 	@include span-columns(8, 16);
 	@include prefix(4, 16);
@@ -240,7 +220,6 @@ h1 {
 			float: left;
 			font-weight: 700;
 			letter-spacing: -.07em;
-			// padding: 0 8.096%;
 			position: relative;
 			text-align: center;
 			width: 33.33%;
@@ -284,7 +263,6 @@ h1 {
 	}
 
 	.stats {
-		// width: 100%;
 		@include span-columns(13.8, 16);
 		@include prefix(1.1);
 
@@ -379,16 +357,7 @@ polyline{
 .section-four {
 	@extend .dark;
 
-	h2 {
-		// color: $lighterGray2;
-	}
-
-	p {
-		// color: #fff;
-	}
-
 	.text {
-		// @include px-to-rem(padding-bottom, $baseline * 4);
 		@include px-to-rem(padding-top, $baseline * 5);
 	}
 
@@ -688,37 +657,3 @@ polyline{
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
