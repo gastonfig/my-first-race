@@ -13,7 +13,7 @@
 // SUSY
 // 16 col 940px wide
 $total-columns: 16;
-$column-width: 40px;
+$column-width: 55px;
 $gutter-width: 20px;    
 $grid-padding: 0; 
 
@@ -22,7 +22,8 @@ $container-style: magic;
 .container {	
 	// @include susy-grid-background;
 	@include container;
-	padding: 0 120px;
+	// padding: 0 120px;
+	padding: 0;
 
 	&.main {
 		background-color: #fff;
@@ -30,8 +31,8 @@ $container-style: magic;
 }
 
 .stretch {
-	@include pull(2, 16);
-	@include span-columns(20, 16);
+	// @include pull(2, 16);
+	// @include span-columns(20, 16);
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -61,8 +62,8 @@ section, footer {
 
 .one-three {
 	.col-one {
-		@include span-columns(6, 16);
-		// @include prefix(1);
+		@include span-columns(5, 16);
+		@include prefix(1);
 	}
 
 	.col-three {
@@ -452,16 +453,11 @@ polyline{
 
 	.col-one {
 		float: left;
-		width: columns(6, 16) - gutter();
-		margin-left: columns(-1);
-
 		@include px-to-rem(margin-top, $baseline * 5.2);
 	}
 
 	.col-three {		
-		@include span-columns(12, 16);
 		float: right;
-		margin-right: columns(-3, 16);
 	}
 
 	.tunes__stats {
@@ -659,8 +655,6 @@ polyline{
 .container footer {
 	background: $footerBg;
 	color: #fff;
-
-	@include span-columns(20, 16);
 
 	.inner {
 		@include span-columns(14, 16);
