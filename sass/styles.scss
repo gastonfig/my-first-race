@@ -52,6 +52,7 @@ body {
 
 section, footer {
 	@include span-columns(16, 16);
+	margin-right: 0;
 }
 
 .container {
@@ -63,7 +64,7 @@ section, footer {
 .one-three {
 	.col-one {
 		@include span-columns(5, 16);
-		@include prefix(1);
+		@include prefix(1.1);
 	}
 
 	.col-three {
@@ -281,7 +282,10 @@ h1 {
 	}
 
 	.stats {
-		width: 100%;
+		// width: 100%;
+		@include span-columns(13.8, 16);
+		@include prefix(1.1);
+
 		@include px-to-rem(padding-bottom, $baseline * 2);
 		@include px-to-rem(padding-top, $baseline * 2);
 
@@ -453,6 +457,7 @@ polyline{
 
 	.col-one {
 		float: left;
+		@include span-columns(4.5, 16);
 		@include px-to-rem(margin-top, $baseline * 5.2);
 	}
 
