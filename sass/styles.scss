@@ -621,8 +621,8 @@ polyline{
 
 	.social {
 		display: inline-block;
-		margin-left: 10%;
-		width: 80%;
+		@include span-columns(13.2, 16);
+		margin-left: columns(1.4);
 
 		@extend %primary-sans-serif;		
 		@include px-to-rem(margin-top, $baseline * 4);
