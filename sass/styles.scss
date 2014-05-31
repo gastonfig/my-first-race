@@ -230,6 +230,7 @@ h1 {
 
 	.stats {
 		display: block;
+		width: 100%;
 
 		@extend .clearfix;
 		@extend %primary-sans-serif;
@@ -239,9 +240,10 @@ h1 {
 			float: left;
 			font-weight: 700;
 			letter-spacing: -.07em;
-			padding: 0 8.096%;
+			// padding: 0 8.096%;
 			position: relative;
 			text-align: center;
+			width: 33.33%;
 
 			@include type-size(6.9, 7.8);
 
