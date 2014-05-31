@@ -233,21 +233,35 @@ h1 {
 		@extend %primary-sans-serif;
 
 		li {
-			// display: inline-block;
 			color: #eaeaea;
 			float: left;
 			font-weight: 700;
 			letter-spacing: -.07em;
 			padding: 0 8.096%;
+			position: relative;
 			text-align: center;
 
 			@include type-size(6.9, 7.8);
+
+			&:after {
+				background: #464645;
+				content: '';
+				height: 100px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 1px;
+			}
+
+			&:last-child:after {
+				content: none;
+			}
 		}
 
 		span {
 			color: #545351;
 			display: block;
-			font-weight: 400;
+			font-weight: 500;
 			letter-spacing: .05em;
 			text-transform: uppercase;
 
