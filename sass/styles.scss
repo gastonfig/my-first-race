@@ -219,8 +219,42 @@ h1 {
 ----------------------------------------------- */
 .section-two {
 	@extend .dark;
+
 	.inner {
+		@include px-to-rem(margin-bottom, $baseline * 3);
+		@include px-to-rem(padding-top, $baseline * 3);
 		@extend .centered-text;	
+	}
+
+	.stats {
+		display: block;
+
+		@extend .clearfix;
+		@extend %primary-sans-serif;
+
+		li {
+			// display: inline-block;
+			color: #eaeaea;
+			float: left;
+			font-weight: 700;
+			letter-spacing: -.07em;
+			padding: 0 8.096%;
+			text-align: center;
+
+			@include type-size(6.9, 7.8);
+		}
+
+		span {
+			color: #545351;
+			display: block;
+			font-weight: 400;
+			letter-spacing: .05em;
+			text-transform: uppercase;
+
+			@include type-size(1.5);
+		}
+
+		@include px-to-rem(margin-bottom, $baseline * 4);
 	}
 }
 
@@ -372,7 +406,6 @@ polyline{
 		}
 	}
 }
-
 
 /* SECTION FIVE
 ----------------------------------------------- */
