@@ -155,13 +155,13 @@ a {
 	text-decoration: none;
 }
 
-.drop {
-	color: $accent;
-	float: left;
-	padding-right: 4px;
+// .drop {
+// 	color: $accent;
+// 	float: left;
+// 	padding-right: 4px;
 
-	@include type-size(6.9, 6.5);
-}
+// 	@include type-size(6.9, 6.5);
+// }
 
 .centered-text {
 	@include span-columns(8, 16);
