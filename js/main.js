@@ -250,7 +250,7 @@ $('.first').qtip('show');
 
     // Dots
     arcs.append('circle')
-        .attr('r', 3)
+        .attr('r', 1.5)
         .attr('fill', lineColor)
         .attr("cx", function(d) { return arc.centroid(d)[0]; })       
         .attr("cy", function(d) { return arc.centroid(d)[1]; });
