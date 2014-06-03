@@ -2,6 +2,7 @@
 ----------------------------------------------- */
 $primarySerif: georgia, serif;
 $primarySansSerif: "futura-pt", helvetica, arial, sans-serif;
+$secondarySansSerif: "proxima-nova-condensed", helvetica, arial, sans-serif;
 
 %primary-serif {
 	font-family: $primarySerif;	
@@ -9,4 +10,8 @@ $primarySansSerif: "futura-pt", helvetica, arial, sans-serif;
 
 %primary-sans-serif {
 	font-family: $primarySansSerif;
+}
+
+%secondary-sans-serif {
+	font-family: $secondarySansSerif;
 }

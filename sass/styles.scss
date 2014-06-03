@@ -183,6 +183,7 @@ header {
 h1 {	
 	color: #fff;
 	display: table-cell;
+	font-style: italic;
 	margin: 0;
 	// padding: 478px 0;
 	padding: 0;
@@ -192,7 +193,7 @@ h1 {
 	vertical-align: middle;
 
 	@include type-size(8.1);
-	@extend %primary-sans-serif;
+	@extend %secondary-sans-serif;
 
 	// &:after {
 	// 	background: url('../images/title-bg.svg') no-repeat center;
