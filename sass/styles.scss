@@ -96,7 +96,7 @@ $baseline: 3;
 }
 
 .container {
-	h1, h2, h3, h4 {
+	h2, h3, h4 {
 		@extend %primary-sans-serif;
 	}
 
@@ -172,19 +172,38 @@ a {
 /* HEADER
 ----------------------------------------------- */
 header {
-	background: url('../images/hero.jpg') no-repeat center center;
+	background: url('../images/hero-2.jpg') no-repeat center;
 	background-size: cover;
-	position: relative;
+	display: table;
+	height: 100vh;
+	position: relative;	
+	width: 100%;
 }
 
-h1 {
+h1 {	
 	color: #fff;
+	display: table-cell;
 	margin: 0;
-	padding: 478px 0;
+	// padding: 478px 0;
+	padding: 0;
+	position: relative;
 	text-align: center;
 	text-transform: uppercase;
+	vertical-align: middle;
 
 	@include type-size(8.1);
+	@extend %primary-sans-serif;
+
+	// &:after {
+	// 	background: url('../images/title-bg.svg') no-repeat center;
+	// 	content: '';
+	// 	height: 100%;
+	// 	left: 0;
+	// 	opacity: .65;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	width: 100%;
+	// }
 }
 
 /* SECTION ONE

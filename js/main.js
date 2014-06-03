@@ -1,5 +1,32 @@
 $(document).ready(function() {
 
+//
+Modernizr.addTest("viewportunits", function() { 
+    var viewportBool;
+    
+    Modernizr.testStyles("#modernizr { width: 50vw; }", function(elem, rule) {   
+        var width = parseInt(window.innerWidth/2,10),
+            compStyle = parseInt((window.getComputedStyle ?
+                      getComputedStyle(elem, null) :
+                      elem.currentStyle)["width"],10);
+        
+        viewportBool= !!(compStyle == width);
+    });
+    
+    return viewportBool;
+});
+
+if (Modernizr.viewportunits === false) {
+    var winHeight = $(window).height();
+    $('header').css('height', winHeight);
+}
+
+
+//
+//
+//
+//
+
 var map = L.map('map').setView([45.52,-122.67762], 14);
 
 L.tileLayer('http://a.tiles.mapbox.com/v3/gastonfig.hjp9813o/{z}/{x}/{y}.png').addTo(map);
