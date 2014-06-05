@@ -84,6 +84,14 @@ section, footer {
 			@include suffix(2, 16);
 		}
 	}
+
+	@include respond-to(phone-mid) {
+		// .col-one, .col-three {
+		// 	width: columns(14, 16);
+		// 	@include prefix(1, 16);
+		// 	@include suffix(1, 16);
+		// }
+	}
 }
 
 .dark {
@@ -240,11 +248,11 @@ h1 {
 
 /* SECTION ONE
 ----------------------------------------------- */
-.section-one {
-	@include px-to-rem(margin-bottom, $baseline * 5.5);
-	@include px-to-rem(padding-top, $baseline * 4.5);
+.section-one {	
 	
 	.inner {
+		@include px-to-rem(margin-bottom, $baseline * 5.5);
+		@include px-to-rem(padding-top, $baseline * 4.5);
 		@extend .centered-text;	
 	}
 }
@@ -448,13 +456,46 @@ polyline{
 	}
 }
 
+.container {
+	.section-one .inner, .section-two .inner, .section-three .text, .section-four .text, .section-five .text, .section-six .inner {
+		@include respond-to(medium) {
+			margin-bottom: 0;
+			margin-top: 0;
+			@include px-to-rem(padding-top, $baseline * 3.5);			
+		}
+
+		@include respond-to(tablet-portrait) {
+			@include px-to-rem(padding-bottom, $baseline * 1.75);
+			@include px-to-rem(padding-top, $baseline * 1.75);
+		}
+	}
+}
+
 /* SECTION FOUR
 ----------------------------------------------- */
 .section-four {
 	@extend .dark;
 
 	.text {
-		@include px-to-rem(padding-top, $baseline * 5);
+		@include px-to-rem(padding-top, $baseline * 4);
+
+		@include respond-to(large) {
+			@include px-to-rem(padding-top, $baseline * 3.5);
+		}
+
+		@include respond-to(medium) {
+
+			p {
+				@include type-size(1.4, 2.6);	
+			}			
+		}
+
+		@include respond-to(tablet-portrait) {
+
+			p {
+				@include type-size(1.6, 3);
+			}			
+		}
 	}
 
 	.col-three {
@@ -735,11 +776,10 @@ polyline{
 ----------------------------------------------- */
 .section-six {
 	@extend .dark;
-
 	@include px-to-rem(padding-bottom, $baseline * 2);
-	@include px-to-rem(padding-top, $baseline * 3.5);
 
 	.inner {
+		@include px-to-rem(padding-top, $baseline * 3.5);
 		@extend .centered-text;
 	}
 
