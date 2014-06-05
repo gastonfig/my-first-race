@@ -26,10 +26,8 @@ if (Modernizr.viewportunits === false) {
 }
 
 
-//
-//
-//
-//
+/* MAP
+----------------------------------------------- */
 
 var map = L.map('map').setView([45.52,-122.67762], 14);
 
@@ -56,12 +54,6 @@ var multiLineStyle = {
 L.geoJson(geojsonFeatures,{
     style: multiLineStyle
 }).addTo(map);
-
-/**
- * Map tooltips
- * 
- */
-
 
 // Custom marker
 var mapMarker = L.Icon.extend( {
@@ -111,8 +103,6 @@ $.getJSON("js/15k-songs.js", function(songs) {
 
     geoJsonLayer.addTo(map);
     // map.fitBounds(geoJsonLayer.getBounds());
-
-
 });
 
 map.on('popupopen', function(e) {
@@ -133,12 +123,8 @@ $('.leaflet-marker-pane').click(function() {
 
 
 
-
-/**
- * Tooltips using jUQuery QTip plugin
- * 
- */
-
+/* Tooltips using jUQuery QTip plugin
+ ----------------------------------------------- */
 $('.activity').qtip({
     content: {
         text: function(event, api) {
@@ -186,10 +172,8 @@ $('.activity').qtip({
 // Show the first tooltip on load and hide when others are hovered
 $('.first').qtip('show');
 
-/**
- * Pie Chart Using D3.js
- *
- */
+/* Pie Chart Using D3.js
+----------------------------------------------- */
 
     var data = [
         {"value": 66.7, "label": "Planned", "sublabel": 27},

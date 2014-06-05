@@ -194,14 +194,14 @@ header {
 	height: 100vh;
 	position: relative;	
 	width: 100%;
-
-	@include respond-to(phone-mid) {
-		
-	}
 }
 
-@include respond-to(phone-mid) {
-	.touch header {
+.touch header {		
+	background-size: 160%;
+	height: 660px;
+
+	@include respond-to(phone-mid) {
+
 		background-size: 210%;
 		height: 400px;
 
@@ -560,6 +560,20 @@ polyline{
 					opacity: .8;
 				}
 			}
+		}
+		@include respond-to(medium) {
+			padding: 0;
+			width: 100%;
+		}		
+	}
+
+	@at-root .touch #map {
+		@include respond-to(tablet-portrait) {
+			height: 400px;
+		}
+
+		@include respond-to(phone-big) {
+			height: 300px;
 		}
 	}
 
