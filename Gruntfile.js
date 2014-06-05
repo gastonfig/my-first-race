@@ -28,7 +28,8 @@ module.exports = function(grunt) {
         src: [
           'js/vendor/jquery-1.10.2.min.js',
           'js/vendor/jquery.qtip.min.js',
-          'js/vendor/d3.min.js',        
+          'js/vendor/d3.min.js',     
+          'js/vendor/jquery.fittext.js',     
           'js/main.js'
         ],
         dest: 'dist/js/script.min.js'

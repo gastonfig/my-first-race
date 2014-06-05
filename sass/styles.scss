@@ -194,11 +194,20 @@ header {
 	height: 100vh;
 	position: relative;	
 	width: 100%;
+
+	@include respond-to(phone-mid) {
+		
+	}
 }
 
 @include respond-to(phone-mid) {
 	.touch header {
+		background-size: 210%;
 		height: 400px;
+
+		h1 {
+			@include type-size(4.8);
+		}
 	}
 }
 

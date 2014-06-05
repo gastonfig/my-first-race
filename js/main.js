@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+/* FITTEXT
+----------------------------------------------- */
+$('header h1').fitText(2.1, { minFontSize: '51px', maxFontSize: '87px' });
+
 //
 Modernizr.addTest("viewportunits", function() { 
     var viewportBool;
