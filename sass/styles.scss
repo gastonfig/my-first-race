@@ -803,11 +803,27 @@ polyline{
 
 			width: columns(4, 12) + gutter(12);
 			@extend %border-box;
+			@extend %basic-animation;
 
-			&:last-child {
-				border-right: 2px solid $darkLine;
-				width: columns(4, 12);
-				@include omega;
+
+			@include breakpoint('min-width: 641px') {
+				
+				&:last-child {
+					border-right: 2px solid $darkLine;
+					width: columns(4, 12);
+					@include omega;
+				}
+			}
+
+			@include respond-to(phone-mid) {
+				border: 2px solid $darkLine;
+				width: 100%;
+
+				@include px-to-rem(margin-bottom, 2.4);
+			}
+
+			&:hover {
+				border-color: $accent;
 			}
 		}
 
@@ -818,7 +834,13 @@ polyline{
 			padding: 24px 0;
 			text-transform: uppercase;
 
+			@extend %basic-animation;
 			@include type-size(1.6);
+
+			&:hover {
+				background: $accent;				
+				color: $darkGray;
+			}
 		}
 	}
 }
