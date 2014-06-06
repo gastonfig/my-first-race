@@ -795,6 +795,10 @@ polyline{
 		@extend %primary-sans-serif;		
 		@include px-to-rem(margin-top, $baseline * 4);
 
+		@include respond-to(tablet-portrait) {
+			@include px-to-rem(margin-top, $baseline / 2);
+		}
+
 		li {
 			border: 2px solid $darkLine;
 			border-right: none;
@@ -819,7 +823,7 @@ polyline{
 				border: 2px solid $darkLine;
 				width: 100%;
 
-				@include px-to-rem(margin-bottom, 2.4);
+				@include px-to-rem(margin-bottom, 1.8);
 			}
 
 			&:hover {
