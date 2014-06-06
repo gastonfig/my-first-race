@@ -199,7 +199,8 @@ $('.first').qtip('show');
 
     var canvas = d3.select('#pie-chart')
         .append('svg')
-        .attr("viewBox", "0 0 " + width + " " + height)
+        .attr("viewBox", "60 60 300 300")
+        .attr('fill', 'red')
         // .attr('width', width)
         // .attr('height', height);
 

@@ -424,16 +424,36 @@ h1 {
 			&.activity {
 				background: $accent;
 			}
+			
+			@include respond-to(phone-mid) {
+				height: 32px;
+				width: 32px;
+			}
 		}
 	}
 }
 
 // Graph
 #pie-chart {
-	height: 480px;
+	height: 380px;
+	// background: #ddd;
 
 	text {
 		@extend %primary-sans-serif;
+	}
+
+	@include respond-to(medium) {
+		height: 490px;
+		padding: 0;
+		width: 100%;
+	}
+	
+	@include respond-to(phone-mid) {
+		height: 320px;
+	}
+
+	@include respond-to(phone) {
+		height: 270px;
 	}
 }
 
