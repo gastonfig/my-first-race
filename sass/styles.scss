@@ -131,6 +131,7 @@ $baseline: 3;
 	}
 }
 
+
 h2 {
 	color: $darkGray;
 	letter-spacing: .07em;
@@ -153,6 +154,10 @@ h2 {
 
 	&.pull {
 		margin-left: columns(-2);
+
+		@include respond-to(phone-mid) {
+			margin-left: 0;
+		}
 	}
 }
 
@@ -183,7 +188,11 @@ a {
 	}
 
 	h2 {
-		@extend .pull;
+		margin-left: columns(-2);
+
+		@include respond-to(phone-mid) {
+			margin-left: 0;
+		}
 	}
 
 	@include respond-to(large) {
@@ -191,6 +200,27 @@ a {
 		@include prefix(2, 16);
 		@include suffix(2, 16);
 	}
+}
+
+.section-three h2, .section-five h2 {
+ 	@include respond-to(medium) {
+ 		margin-left: columns(-2); 		
+ 	}
+
+ 	@include respond-to(phone-mid) {
+ 		margin-left: 0;
+ 	}
+	
+}
+
+.section-four h2 {
+	@include respond-to(tablet-portrait) {
+ 		margin-left: columns(-2); 		
+ 	}
+
+ 	@include respond-to(phone-mid) {
+ 		margin-left: 0;
+ 	}
 }
 
 /* HEADER
@@ -461,7 +491,9 @@ polyline{
 		@include respond-to(medium) {
 			margin-bottom: 0;
 			margin-top: 0;
-			@include px-to-rem(padding-top, $baseline * 3.5);			
+			
+			@include px-to-rem(padding-bottom, $baseline * 3.5);
+			@include px-to-rem(padding-top, $baseline * 3.5);		
 		}
 
 		@include respond-to(tablet-portrait) {
@@ -795,7 +827,7 @@ polyline{
 		@extend %primary-sans-serif;		
 		@include px-to-rem(margin-top, $baseline * 4);
 
-		@include respond-to(tablet-portrait) {
+		@include respond-to(medium) {
 			@include px-to-rem(margin-top, $baseline / 2);
 		}
 

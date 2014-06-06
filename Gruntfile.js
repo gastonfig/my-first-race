@@ -7,16 +7,19 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     // Task configuration.
     compass: {
-      dist: {
+      options: {
+        httpPath: 'dist/',
+        cssDir: 'dist/css',
+        sassDir: 'sass/',
+        imagesDir: '/images',
+        javascriptsDir: 'js/',
+        fontsDir: 'fonts/',
+        require: 'susy',
+        outputStyle: 'compressed'
+      },
+      scss: {
         options: {
-          httpPath: 'dist/',
-          cssDir: 'dist/css',
-          sassDir: 'sass/',
-          imagesDir: '/images',
-          javascriptsDir: 'js/',
-          fontsDir: 'fonts/',
-          require: 'susy',
-          outputStyle: 'compressed'
+          sourcemap: true
         }
       }
     },
