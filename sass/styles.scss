@@ -304,6 +304,7 @@ h1 {
 
 		@extend .clearfix;
 		@extend %primary-sans-serif;
+		@include px-to-rem(margin-bottom, $baseline * 4);
 
 		li {
 			color: #eaeaea;
@@ -341,8 +342,6 @@ h1 {
 			@include type-size(1.5);
 		}
 
-		@include px-to-rem(margin-bottom, $baseline * 4);
-
 		@include respond-to(medium) {
 			li {
 				@include type-size(6.3, 7.1);
@@ -364,6 +363,8 @@ h1 {
 		}
 
 		@include respond-to(phone-big) {
+			@include px-to-rem(margin-bottom, $baseline);
+			
 			li {
 				margin-bottom: 27px;
 				margin-left: 5%;
@@ -602,6 +603,18 @@ polyline{
 
 			span {
 				@include type-size(1.6);
+			}
+		}
+		
+		@include respond-to(phone) {
+			li {
+				padding: 54px 0 39px 0;
+				
+				@include type-size(5.1, 5.3);		
+			}
+
+			span {
+				@include type-size(.3);
 			}
 		}
 	}
