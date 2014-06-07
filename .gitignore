@@ -4,6 +4,7 @@
 /.sass-cache
 .DS_Store
 /Node_Server/node_modules/grunt
+/bower_components
 /components
 /public/components
 /node_modules
