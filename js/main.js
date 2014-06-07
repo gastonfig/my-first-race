@@ -25,6 +25,44 @@ if (Modernizr.viewportunits === false) {
     $('header').css('height', winHeight);
 }
 
+/* COUNT UP
+----------------------------------------------- */
+var countOptions = {
+  useEasing : true, 
+  useGrouping : true, 
+  separator : ',', 
+  decimal : '.' 
+}
+
+function sectionTwoCount() {
+    // Participants
+    var countParticipants = parseInt($('#participants-count').attr('data-count'));
+    var participantsCount = new countUp("participants-count", 0, countParticipants, 0, 1.5, countOptions);
+    participantsCount.start();
+
+    // Competitors
+    var countCompetitors = parseInt($('#competitors-count').attr('data-count'));
+    var competitorsCount = new countUp("competitors-count", 0, countCompetitors, 0, 1.5, countOptions);
+    competitorsCount.start();
+
+    // Finishers
+    var countFinishers = parseInt($('#finishers-count').attr('data-count'));
+    var finishersCount = new countUp("finishers-count", 0, countFinishers, 0, 1.5, countOptions);
+    finishersCount.start();
+}
+
+
+/* WAYPOINTS
+----------------------------------------------- */
+$('.section-two .stats').waypoint(function(direction) {
+    
+    if(direction === 'down') {
+        sectionTwoCount();
+    }
+},{
+    triggerOnce: true,
+
+});
 
 /* MAP
 ----------------------------------------------- */
