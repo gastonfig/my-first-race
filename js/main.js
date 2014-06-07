@@ -30,27 +30,62 @@ if (Modernizr.viewportunits === false) {
 var countOptions = {
   useEasing : true, 
   useGrouping : true, 
+  separator : '', 
+  decimal : '.' 
+};
+
+var countOptionsSeparator = {
+  useEasing : true, 
+  useGrouping : true, 
   separator : ',', 
   decimal : '.' 
-}
+};
+
+var countOptionsTime = {
+  useEasing : true, 
+  useGrouping : true, 
+  separator : ',', 
+  decimal : ':' 
+};
 
 function sectionTwoCount() {
     // Participants
     var countParticipants = parseInt($('#participants-count').attr('data-count'));
-    var participantsCount = new countUp("participants-count", 0, countParticipants, 0, 1.5, countOptions);
+    var participantsCount = new countUp("participants-count", 0, countParticipants, 0, 1.5, countOptionsSeparator);
     participantsCount.start();
 
     // Competitors
     var countCompetitors = parseInt($('#competitors-count').attr('data-count'));
-    var competitorsCount = new countUp("competitors-count", 0, countCompetitors, 0, 1.5, countOptions);
+    var competitorsCount = new countUp("competitors-count", 0, countCompetitors, 0, 1.5, countOptionsSeparator);
     competitorsCount.start();
 
     // Finishers
     var countFinishers = parseInt($('#finishers-count').attr('data-count'));
-    var finishersCount = new countUp("finishers-count", 0, countFinishers, 0, 1.5, countOptions);
+    var finishersCount = new countUp("finishers-count", 0, countFinishers, 0, 1.5, countOptionsSeparator);
     finishersCount.start();
 }
 
+function sectionFourCount() {
+    // Competitors
+    var countDistance = parseFloat($('#distance-count').attr('data-count'), 1);
+    var distanceCount = new countUp("distance-count", 0, countDistance, 1, 1.5, countOptionsSeparator);
+    distanceCount.start();
+
+    // Pace
+    var countPace = parseFloat($('#pace-count').attr('data-count'), 2);
+    var paceCount = new countUp("pace-count", 0, countPace, 2, 1.5, countOptionsTime);
+    paceCount.start();
+
+    // Finishers
+    var countTime = parseFloat($('#time-count').attr('data-count'), 2);
+    var timeCount = new countUp("time-count", 0, countTime, 2, 1.5, countOptionsTime);
+    timeCount.start();
+
+    // Finishers
+    var countRank = parseInt($('#rank-count').attr('data-count'));
+    var rankCount = new countUp("rank-count", 0, countRank, 0, 1.5, countOptions);
+    rankCount.start();
+}
 
 /* WAYPOINTS
 ----------------------------------------------- */
@@ -59,9 +94,21 @@ $('.section-two .stats').waypoint(function(direction) {
     if(direction === 'down') {
         sectionTwoCount();
     }
-},{
+},
+{
     triggerOnce: true,
+    offset: '100%'
+});
 
+$('.section-four .stats').waypoint(function(direction) {
+    
+    if(direction === 'down') {
+        sectionFourCount();
+    }
+},
+{
+    triggerOnce: true,
+    offset: '100%'
 });
 
 /* MAP

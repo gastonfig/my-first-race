@@ -578,7 +578,7 @@ polyline{
 			@include type-size(9, 9.2);
 			@extend %border-box;
 
-			span {
+			.label {
 				color: $lightGray;
 				display: block;
 				font-weight: 400;
@@ -601,7 +601,7 @@ polyline{
 				}			
 			}
 
-			span {
+			.label {
 				@include type-size(1.8);
 			}
 		}
@@ -621,7 +621,7 @@ polyline{
 				@include type-size(6, 6.2);		
 			}
 
-			span {
+			.label {
 				@include type-size(1.6);
 			}
 		}
@@ -633,7 +633,7 @@ polyline{
 				@include type-size(5.1, 5.3);		
 			}
 
-			span {
+			.label {
 				@include type-size(.3);
 			}
 		}
