@@ -128,6 +128,12 @@ module.exports = function(grunt) {
     },
     clean: {
       build: ['dist']
+    },
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
     }
   });
 
