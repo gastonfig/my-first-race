@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
+
+        <title>My First Race</title>
+        <meta name="description" content="{{DESCRIPTION}}">
+        <meta property="og:title" content="My First Race"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="{{DESCRIPTION}}"/>
+        <meta property="og:image" content="/images/my-first-race-img.jpg"/>
+        <meta property="og:url" content="{{URL}}"/>
+        <meta property="og:site_name" content="My First Race"/>
+        <meta name="twitter:site" content="@gastonfig"> 
+
+        <link type="image/x-icon" href="favicon.png" rel="icon"/>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+        <script src="js/15k-data-geojson.js"></script>        
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript" src="//use.typekit.net/soi6zye.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+                <h1>My First Race</h1>
+        </header>
+
+        <div class="container main">
+            <section class="section-one light">
+                <div class="inner">
+                    <h2>How it All Started</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue consequat felis vitae volutpat. Cras vestibulum volutpat massa at ultricies. Donec hendrerit lacus vel turpis mollis sit amet volutpat leo pharetra. Cras eu tellus magna, nec sodales turpis. Nulla suscipit turpis ornare purus mollis ultricies. Cras congue cursus magna eu varius. Vivamus eget nulla justo. Ut eget magna diam, lobortis ultrices tortor.</p>
+                </div>
+            </section>
+
+            <section class="section-two">
+                <img src="../images/section-1.jpg" alt="">
+
+                <div class="inner">
+                    <h2>How it All Started</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue consequat felis vitae volutpat. Cras vestibulum volutpat massa at ultricies. Donec hendrerit lacus vel turpis mollis sit amet volutpat leo pharetra. Cras eu tellus magna, nec sodales turpis. Nulla suscipit turpis ornare purus mollis ultricies. Cras congue cursus magna eu varius. Vivamus eget nulla justo. Ut eget magna diam, lobortis ultrices tortor. Fusce bibendum cursus quam, bibendum eleifend justo accumsan adipiscing. Nam vulputate lacus eu ligula commodo ornare. Morbi viverra, dolor vel lobortis sollicitudin, dolor purus tincidunt quam, ut porttitor arcu nibh sed est. Donec id urna ut elit tincidunt pretium in sed metus. Nulla congue magna nec dui lacinia ut tincidunt quam euismod. Suspendisse a nulla enim, vitae volutpat nisl. Morbi pharetra congue erat a varius. Sed fringilla venenatis nunc eget scelerisque.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue consequat felis vitae volutpat. Cras vestibulum volutpat massa at ultricies. Donec hendrerit lacus vel turpis mollis sit amet volutpat leo pharetra. Cras eu tellus magna, nec sodales turpis. Nulla suscipit turpis ornare purus mollis ultricies. Cras congue cursus magna eu varius. Vivamus eget nulla justo. Ut eget magna diam, lobortis ultrices tortor. Fusce bibendum cursus quam, bibendum eleifend justo accumsan adipiscing. Nam vulputate lacus eu ligula commodo ornare. Morbi viverra, dolor vel lobortis sollicitudin, dolor purus tincidunt quam, ut porttitor arcu nibh sed est. Donec id urna ut elit tincidunt pretium in sed metus. Nulla congue magna nec dui lacinia ut tincidunt quam euismod. Suspendisse a nulla enim, vitae volutpat nisl. Morbi pharetra congue erat a varius. Sed fringilla venenatis nunc eget scelerisque.</p>                    
+                </div>
+
+                <ul class="stats">
+                    <li><span id="participants-count" data-count="32795">0</span> <span class="label">Total Participants</span></li>
+                    <li><span id="competitors-count" data-count="11180">0</span> <span class="label">15K Competitors</span></li>
+                    <li><span id="finishers-count" data-count="8777">0</span> <span class="label">15K Finishers</span></li>
+                </ul>
+            </section>
+
+            <section class="section-three one-three light">
+                <div class="col-one text">
+                    <h2>My Training</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue consequat felis vitae volutpat. Cras vestibulum volutpat massa at ultricies. Donec hendrerit lacus vel turpis mollis sit amet volutpat leo pharetra. Cras eu tellus magna, nec sodales turpis. Nulla suscipit turpis ornare purus mollis ultricies.</p>
+                </div>
+
+                <div id="pie-chart" class="col-three"></div>
+
+                <ul class="dots stats">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="activity first" qtip-content="4.39" qtip-title="Jan-16"></li>
+                    <li></li>
+                    <li class="activity" qtip-content="4.68" qtip-title="Jan-18"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="activity" qtip-content="4.49" qtip-title="Jan-22"></li>
+                    <li class="activity" qtip-content="4.43" qtip-title="Jan-23"></li>
+                    <li></li>
+                    <li class="activity" qtip-content="3.64" qtip-title="Jan-25"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="activity" qtip-content="9.19" qtip-title="Feb-22"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="activity" qtip-content="9.26" qtip-title="Mar-01"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="activity" qtip-content="4.44" qtip-title="Jan-08"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="activity" qtip-content="6.23" qtip-title="Mar-13"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>            
+
+            <section class="section-four three-one">
+                <div class="col-one text">
+                    <h2>My Stats</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue consequat felis vitae volutpat. Cras vestibulum volutpat massa at ultricies. Donec hendrerit lacus vel turpis mollis sit amet volutpat leo pharetra. Cras eu tellus magna, nec sodales turpis. Nulla suscipit turpis ornare purus mollis ultricies. Cras congue cursus magna eu varius. Vivamus eget nulla justo. Ut eget magna diam, lobortis ultrices tortor.</p>
+                </div>
+
+                <div class="col-three stats">
+                    <ul>
+                        <li class="first"><span id="distance-count" data-count="9.3">0</span><span class="label">miles</p></li>
+                        <li class="second"><span id="pace-count" data-count="9.23">0</span><span class="label">mi/mile</p></li>
+                        <li class="third"><span id="time-count" data-count="1.27">0</span><span class="label">hours</p></li>
+                        <li class="fourth"><span id="rank-count" data-count="3899">0</span><span class="label">/8125</p></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section-five one-three light">
+                <div class="col-one text">
+                    <h2>My Tunes</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue consequat felis vitae volutpat. Cras vestibulum volutpat massa at ultricies. Donec hendrerit lacus vel turpis mollis sit amet volutpat leo pharetra. Cras eu tellus magna, nec sodales turpis. Nulla suscipit turpis ornare purus mollis ultricies. Cras congue cursus magna eu varius. Vivamus eget nulla justo. Ut eget magna diam, lobortis ultrices tortor.</p>
+                </div>
+
+                <div id="map" class="col-three"></div>
+            </section>
+
+            <section class="section-six">
+                <div class="inner">
+                    <h2>Closing Thoughts</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue consequat felis vitae volutpat. Cras vestibulum volutpat massa at ultricies. Donec hendrerit lacus vel turpis mollis sit amet volutpat leo pharetra. Cras eu tellus magna, nec sodales turpis. Nulla suscipit turpis ornare purus mollis ultricies. Cras congue cursus magna eu varius. Vivamus eget nulla justo. Ut eget magna diam, lobortis ultrices tortor.</p>
+                </div>
+
+                <ul class="social">
+                    <li><a class="popup" href="https://twitter.com/intent/tweet?text=My First Race&amp;url={{URL}}&amp;source=gastonfigcom&amp;related=gastonfig&amp;via=gastonfig" target="_blank">Twitter</a></li>
+                    <li><a class="popup" href="https://www.facebook.com/sharer/sharer.php?u={{URL}}&amp;t=My First Race" target="_blank">Facebook</a></li>
+                    <li><a class="popup" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{URL}}&amp;title=My First Race&amp;summary=&amp;source=Gaston Figueroa" target="_blank">LinkedIn</a></li>
+                </ul>
+            </section>
+
+            <footer>
+                <div class="inner">
+                    <p class="attr">Designed &amp; Built by: <a href="http://twitter.com/gastonfig" target="_blank">@gastonfig</a></p>
+
+                    <ul class="social">
+                        <li><a href="https://twitter.com/gastonfig" class="ss-twitter" target="_blank"></a></li>
+                        <li><a href="https://github.com/gastonfig" class="ss-octocat" target="_blank"></a></li>
+                        <li><a href="https://dribbble.com/gastonfig" class="ss-dribbble" target="_blank"></a></li>
+                    </ul>
+
+                    <p class="photo-attr">Special thanks to the Shamrock Run for allowing me to use their images of the race.</p>
+
+                </div>
+            </footer>       
+        </div>        
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/script.min.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
