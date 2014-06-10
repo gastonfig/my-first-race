@@ -43,6 +43,14 @@ section, footer {
 	img {
 		width: 100%;
 	}
+
+	.inline-img {
+		padding: 30px;
+		padding-left: columns(1);
+		@include span-columns(8, 16);
+		@include omega;
+		margin-right: columns(-4);
+	}
 }
 
 .one-three {
