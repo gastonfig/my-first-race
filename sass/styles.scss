@@ -250,6 +250,11 @@ header {
 	height: 100vh;
 	position: relative;	
 	width: 100%;
+
+	-webkit-animation-duration: .8s;
+	animation-duration: .8s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
 }
 
 .touch header {		
@@ -267,12 +272,36 @@ header {
 	}
 }
 
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
 h1 {	
 	color: #fff;
 	display: table-cell;
 	font-style: italic;
 	margin: 0;
-	// padding: 478px 0;
 	padding: 0;
 	position: relative;
 	text-align: center;
@@ -281,17 +310,6 @@ h1 {
 
 	@include type-size(8.1);
 	@extend %secondary-sans-serif;
-
-	// &:after {
-	// 	background: url('../images/title-bg.svg') no-repeat center;
-	// 	content: '';
-	// 	height: 100%;
-	// 	left: 0;
-	// 	opacity: .65;
-	// 	position: absolute;
-	// 	top: 0;
-	// 	width: 100%;
-	// }
 }
 
 /* SECTION ONE
@@ -586,7 +604,6 @@ polyline{
 				color: $lightGray;
 				display: block;
 				font-weight: 400;
-				// letter-spacing: .1em;
 				text-transform: uppercase;
 				@include type-size(2);
 			}

@@ -141,6 +141,6 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['imagemin', 'concat', 'compass', 'uglify']);
-  grunt.registerTask('push', ['imagemin', 'includes', 'compass', 'concat', 'uglify', 'rsync:deploy-staging']);
+  grunt.registerTask('push', ['imagemin', 'includes', 'compass', 'concat', 'uglify', 'gh-pages']);
   grunt.registerTask('server', ['copy', 'connect', 'watch']);
 };
