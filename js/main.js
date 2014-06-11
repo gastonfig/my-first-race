@@ -121,6 +121,17 @@ $('.section-four .stats').waypoint(function(direction) {
     offset: '100%'
 });
 
+$('.section-five').waypoint(function(direction) {
+    
+    if(direction === 'down') {
+        $('.leaflet-marker-icon:last-child').trigger('click');
+    }
+},
+{
+    triggerOnce: true,
+    offset: '100%'
+});
+
 /* MAP
 ----------------------------------------------- */
 
