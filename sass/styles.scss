@@ -183,7 +183,17 @@ ul {
 }
 
 a {
+	border-bottom: 1px solid transparent;
+	color: $accent;
+	padding: 0 2px;
 	text-decoration: none;
+
+	@extend %basic-animation;
+
+	&:hover {
+		border-bottom: 1px solid #fcb73f;
+		padding-bottom: 4px;
+	}
 }
 
 .centered-text {
@@ -538,24 +548,10 @@ polyline{
 	@extend .dark;
 
 	.text {
-		@include px-to-rem(padding-top, $baseline * 4);
+		@include px-to-rem(padding-top, $baseline * 5.5);
 
 		@include respond-to(large) {
-			@include px-to-rem(padding-top, $baseline * 3.5);
-		}
-
-		@include respond-to(medium) {
-
-			p {
-				@include type-size(1.4, 2.6);	
-			}			
-		}
-
-		@include respond-to(tablet-portrait) {
-
-			p {
-				@include type-size(1.6, 3);
-			}			
+			@include px-to-rem(padding-top, $baseline * 4.5);
 		}
 	}
 
@@ -982,6 +978,7 @@ polyline{
 		}
 
 		a {
+			border: none;
 			color: #4c4b49;
 			padding: 0 2px;
 
