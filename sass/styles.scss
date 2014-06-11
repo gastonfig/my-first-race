@@ -444,7 +444,7 @@ h1 {
 // Graph
 #pie-chart {
 	height: 380px;
-	// background: #ddd;
+	@include px-to-rem(padding-top, 11.6);
 
 	text {
 		@extend %primary-sans-serif;
