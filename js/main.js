@@ -286,10 +286,10 @@ $('.first').qtip('show');
         {"value": 33.4, "label": "Actual", "sublabel": 9}
     ];
 
-    var width = 410,
-        height = 410,
+    var width = 380,
+        height = 380,
         radius = Math.min(width, height) / 2,
-        innerRadius = radius - 142,
+        innerRadius = radius - 128,
         outerRadius = radius - 100,
         labelRadius = radius - 70,
         textColor = '#292826',
@@ -298,20 +298,12 @@ $('.first').qtip('show');
     var color = d3.scale.ordinal()
         .range(['#F3B845', '#E9EAEB']);
 
-    // var svg = d3.select("#pie-chart")
-    //     .append("svg")
-    //     .attr("viewBox", "0 0 800 500")
-    //     .append("g")
-
     var canvas = d3.select('#pie-chart')
         .append('svg')
-        .attr("viewBox", "60 60 300 300")
-        .attr('fill', 'red')
-        // .attr('width', width)
-        // .attr('height', height);
+        .attr("viewBox", "60 60 300 300");
 
     var group = canvas.append('g')
-        .attr('transform', 'translate('+ radius + ',' + radius + ')')
+        .attr('transform', 'translate(205,' + radius + ')')
 
     var arc = d3.svg.arc()
         .innerRadius(innerRadius)
@@ -348,7 +340,7 @@ $('.first').qtip('show');
             return (d.endAngle + d.startAngle)/2 > Math.PI ?
             "end" : "start";
         })
-        .attr('font-size', '.7em')
+        .attr('font-size', '.66em')
         .attr('fill', textColor)
         .text(function(d,i) { return data[i].label })
 

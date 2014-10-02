@@ -428,8 +428,9 @@ h1 {
 
 /* SECTION THREE
 ----------------------------------------------- */
-.section-three {
-	.text {		
+.container .section-three {
+	.text.text {		
+		padding-bottom: 0;
 		@include px-to-rem(padding-top, $baseline * 2);
 	}
 
@@ -472,20 +473,22 @@ h1 {
 // Graph
 #pie-chart {
 	height: 380px;
-	@include px-to-rem(padding-top, 11.6);
+	@include px-to-rem(padding-top, 5);
 
 	text {
 		@extend %primary-sans-serif;
 	}
 
 	@include respond-to(medium) {
-		height: 490px;
-		padding: 0;
-		width: 100%;
+		height: 500px;
+		margin-bottom: 60px;
+		padding: 0 10%;
+		width: 80%;
 	}
 	
 	@include respond-to(phone-mid) {
 		height: 320px;
+		margin-bottom: 0;
 	}
 
 	@include respond-to(phone) {
